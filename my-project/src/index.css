@@ -1,13 +1,81 @@
-body {
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#nav{
+  background-color: black;
+  margin-bottom: 4em;
+}
+form, #task_page{
+  width: 50%;
+  margin: auto; 
+}
+#task_input{
+  width: 70%;
+  margin-right: 5%;
+}
+#task_btn{
+  width: 25%;
+  margin-bottom: 2em;
+}
+#task_list{
+  background:rgb(244, 249, 253);
+  padding: 12px;
+  margin-bottom: 2em;
+}
+.task_item{
+  margin-bottom: 0.75em;
+}
+.show_btns{
+  display: inline-block;
+  background: rgb(206, 204, 204);
+  padding: 0.65em 1.5em; 
+  margin-right: 3px;
+  border-style: none;
+  border-radius: 3px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 0.90em;
+}
+#all_btn{
+  color: white;
+  background: rgb(31, 117, 187);
+}
+input, textarea{
+  padding: 0.5em; 
+  margin-bottom: 1em;
+  resize: none;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1em;
+}
+form input, form textarea{
+  width: 100%;
+}
+[type="submit"], input[type="button"]{
+  width: 20%;
+  border-style: outset;
+  border-radius: 3px;
+  color: rgb(10, 93, 161);
+  border-color: rgb(10, 93, 161);
+  background: white;
+  cursor: pointer;
+}
+[type="checkbox"]{
+  width: 15px;
+  height: 15px;
+}
+label{
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 0.2em;
+}
+.task_label{
+  width: 95%;
+}
+.far{
+  color: rgb(10, 93, 161);
+  text-align: right;
+}
+.far:hover{
+  cursor: pointer;
 }
