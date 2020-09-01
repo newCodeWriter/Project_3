@@ -1,21 +1,28 @@
 import React from "react";
 import ReactDOM from 'react-dom';
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { createStore } from 'redux'
+import { Provider } from 'react-redux'
+import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 import './index.css';
 import NavBar from './components/navbar';
 import About from './components/about';
 import Error from './components/error';
-import Contact from './components/contact'
-import Tasks from './components/tasks'
+import Contact from './components/contact';
+import App from './App';
+import todoApp from './reducers/reducers';
 
-const App = () => {
+
+const store = createStore(todoApp);
+
+const Routeit = () => {
   return (
     <BrowserRouter>
       <div>
         <NavBar />
         <Switch>
+          <Route exact path="/" render={() => <Redirect to="/about"/>}/>
           <Route path="/about" component={About} />
-          <Route path="/tasks" component={Tasks} />
+          <Route path="/tasks" component={App} />
           <Route path="/contact" component={Contact} />
           <Route component={Error} />
         </Switch>
@@ -24,4 +31,9 @@ const App = () => {
   );
 }
 
-ReactDOM.render(<App />, document.getElementById("root"))
+ReactDOM.render(
+  <Provider store={store}>
+    <Routeit />
+  </Provider>, 
+  document.getElementById("root")
+  )

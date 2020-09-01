@@ -7,7 +7,7 @@
   background-color: black;
   margin-bottom: 4em;
 }
-form, #task_page{
+form, .task_page{
   width: 50%;
   margin: auto; 
 }
@@ -16,8 +16,8 @@ form, #task_page{
   margin-right: 5%;
 }
 #task_btn{
-  width: 25%;
-  margin-bottom: 2em;
+  width: 25% !important;
+  margin-bottom: 2em !important;
 }
 #task_list{
   background:rgb(244, 249, 253);
@@ -29,9 +29,8 @@ form, #task_page{
 }
 .show_btns{
   display: inline-block;
-  background: rgb(206, 204, 204);
   padding: 0.65em 1.5em; 
-  margin-right: 3px;
+  margin-right: 4px;
   border-style: none;
   border-radius: 3px;
   font-family: 'Times New Roman', Times, serif;
@@ -41,7 +40,12 @@ form, #task_page{
   color: white;
   background: rgb(31, 117, 187);
 }
-input, textarea{
+
+.inline-btn{
+  display: inline-block;
+}
+
+input, textarea, #task_btn{
   padding: 0.5em; 
   margin-bottom: 1em;
   resize: none;
@@ -51,7 +55,7 @@ input, textarea{
 form input, form textarea{
   width: 100%;
 }
-[type="submit"], input[type="button"]{
+[type="submit"], #task_btn{
   width: 20%;
   border-style: outset;
   border-radius: 3px;
@@ -61,8 +65,8 @@ form input, form textarea{
   cursor: pointer;
 }
 [type="checkbox"]{
-  width: 15px;
-  height: 15px;
+  width: 3%;
+  height: 14px;
 }
 label{
   font-weight: bold;
@@ -75,6 +79,7 @@ label{
 .far{
   color: rgb(10, 93, 161);
   text-align: right;
+  width: 2%;
 }
 .far:hover{
   cursor: pointer;

@@ -1,41 +1,14 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import { createStore, combineReducers } from "redux";
+import React from 'react'
+import BtnLinks from './components/btnLinks'
+import AddTodo from './containers/addTodo'
+import VisibleTodos from './containers/visibleTodos'
 
-//action creator
-const addItem = item => {
-  return {
-    type: "ADD_ITEM",
-    item: item
-  };
-};
+const App = () => (
+  <div>
+    <AddTodo />
+    <VisibleTodos />
+    <BtnLinks />
+  </div>
+)
 
-//reducer
-const reducer = (state = [], action) => {
-  switch (action.type) {
-    case "ADD_ITEM":
-      return [...state, action.item];
-    default:
-      return state;
-  }
-};
-
-var store = createStore(reducer);
-
-console.log(store.dispatch(addItem("a")));
-console.log(store.getState());
-console.log(store.dispatch(addItem("b")));
-console.log(store.getState());
-console.log(store.dispatch(addItem("c")));
-console.log(store.getState());
-
-function App() {
-  return (
-    <div>
-      <h1>Hello World</h1>
-    </div>
-  );
-}
-
-
-export default App;
+export default App
