@@ -20,9 +20,9 @@ const Routeit = () => {
       <div>
         <NavBar />
         <Switch>
-          <Route exact path="/" render={() => <Redirect to="/about"/>}/>
+          <Route exact path="/" render={() => <Redirect to="/todos"/>}/>
           <Route path="/about" component={About} />
-          <Route path="/tasks" component={App} />
+          <Route path="/todos" component={App} />
           <Route path="/contact" component={Contact} />
           <Route component={Error} />
         </Switch>
