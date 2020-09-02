@@ -7,7 +7,6 @@ const Todo = ({ onClick, completed, text, key, remove }) => (
             name={`checkit_${key}`} 
             id={`checkit_${key}`} 
             onClick={onClick} 
-            title="mark as completed" 
         />
         <label 
             for={`checkit_${key}`} 
