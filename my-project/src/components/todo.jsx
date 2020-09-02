@@ -1,13 +1,13 @@
 import React from 'react'
 
-const Todo = ({ onClick, completed, text, key }) => (
+const Todo = ({ onClick, completed, text, key, remove }) => (
     <div className="task_item">
         <input 
             type="checkbox" 
             name={`checkit_${key}`} 
             id={`checkit_${key}`} 
             onClick={onClick} 
-            title="select to mark as completed" 
+            title="mark as completed" 
         />
         <label 
             for={`checkit_${key}`} 
@@ -17,7 +17,7 @@ const Todo = ({ onClick, completed, text, key }) => (
             }}>
             &nbsp;&nbsp;{text}
         </label>
-        <i className="far fa-trash-alt"></i>
+        <i className="far fa-trash-alt" onClick={remove} title="delete item from list"></i>
         <hr/>
     </div>
 )

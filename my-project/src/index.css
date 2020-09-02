@@ -19,7 +19,7 @@ form, .task_page{
   width: 25% !important;
   margin-bottom: 2em !important;
 }
-#task_list{
+.task_list{
   background:rgb(244, 249, 253);
   padding: 12px;
   margin-bottom: 2em;

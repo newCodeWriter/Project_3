@@ -15,6 +15,11 @@ export const toggleTodo = id => ({
   id
 })
 
+export const deleteTodo = index => ({
+  type: 'DELETE_TODO',
+  index
+})
+
 export const VisibilityFilters = {
   SHOW_ALL: 'SHOW_ALL',
   SHOW_COMPLETED: 'SHOW_COMPLETED',
