@@ -31,8 +31,8 @@ const AddTodo = (props) => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    onClick: id => {
-      dispatch(addTodo(id))
+    onClick: item => {
+      dispatch(addTodo(item))
     }
   }
 }
