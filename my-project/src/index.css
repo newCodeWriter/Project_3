@@ -15,9 +15,8 @@ form, .task_page{
   width: 70%;
   margin-right: 5%;
 }
-#task_btn{
-  width: 25% !important;
-  margin-bottom: 2em !important;
+.task_field{
+  margin-bottom: 2em;
 }
 .task_list{
   background:rgb(244, 249, 253);
@@ -28,17 +27,12 @@ form, .task_page{
   margin-bottom: 0.75em;
 }
 .show_btns{
-  display: inline-block;
   padding: 0.65em 1.5em; 
   margin-right: 4px;
   border-style: none;
   border-radius: 3px;
   font-family: 'Times New Roman', Times, serif;
   font-size: 0.90em;
-}
-#all_btn{
-  color: white;
-  background: rgb(31, 117, 187);
 }
 
 .inline-btn{
@@ -68,19 +62,17 @@ form input, form textarea{
   width: 3%;
   cursor: pointer;
 }
-label{
+.task_label{
+  width: 95%;
+  padding-left: 0.7em;
   font-weight: bold;
   display: inline-block;
   margin-bottom: 0.2em;
 }
-.task_label{
-  width: 95%;
-}
 .far{
   color: rgb(10, 93, 161);
-  text-align: right;
   width: 2%;
 }
-.far:hover{
+.far:hover, button{
   cursor: pointer;
 }
