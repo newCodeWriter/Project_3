@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import { connect } from 'react-redux'
 import { addTodo } from '../actions/actions'
 
-const AddTodo = (props) => {
+const AddTodo = ({onClick}) => {
   const [task, setTask] = useState('')
 
   function handleChange(event){
@@ -10,17 +10,19 @@ const AddTodo = (props) => {
   }
   
   function handleClick(){
+    var input = document.getElementById('task_input');
     if(task === ''){
-      document.getElementById('task_input').focus();
+      input.focus();
     }
     else{
-      props.onClick(task)
-      document.getElementById('task_input').value = ''; 
+      onClick(task);
+      setTask('');
+      input.value = '';
     }
   }
 
   return (
-    <div className="task_page">
+    <div className="task_page task_field">
         <input type="text" name="task_input" id="task_input" onChange={handleChange} placeholder="Enter a task..."/>
         <button type="button" name="task_btn" id="task_btn" onClick={handleClick}>
           Add
