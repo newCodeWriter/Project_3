@@ -7,7 +7,7 @@ const Link = ({ active, children, onClick }) => (
       className="show_btns"
       onClick={onClick}
       style={{
-        background: active ? 'rgb(59, 138, 202)' : 'rgb(206, 204, 204)',
+        background: active ? 'rgb(10, 93, 161)' : 'rgb(206, 204, 204)',
         color: active ? 'white' : 'black'
       }}>
       {children}

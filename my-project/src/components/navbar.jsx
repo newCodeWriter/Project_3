@@ -16,7 +16,7 @@ const NavBar = () => {
   return (
     <div id="nav">
         <NavLink style={navStyle} activeStyle={activeStyle} to="/about">About</NavLink>
-        <NavLink style={navStyle} activeStyle={activeStyle} to="/todos">Tasks</NavLink>
+        <NavLink style={navStyle} activeStyle={activeStyle} to="/todos">Todos</NavLink>
         <NavLink style={navStyle} activeStyle={activeStyle} to="/contact">Contact</NavLink>
     </div>
   );

@@ -3,6 +3,10 @@ import TodoList from '../components/todoList'
 import { VisibilityFilters, toggleTodo, deleteTodo } from '../actions/actions'
 
 const getVisibleTodos = (todos, filter) => {
+  console.log("******************")
+  todos.forEach( (todo) => {
+    console.log(todo.id, todo.text, (todo.completed)? "true" : "false");
+  })
   switch (filter) {
     case VisibilityFilters.SHOW_ALL:
       return todos       

@@ -12,7 +12,11 @@ import App from './App';
 import todoApp from './reducers/reducers';
 
 
-const store = createStore(todoApp);
+const store = createStore(todoApp,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
+
+store.subscribe( () => console.log("todo app="+store.getState()));
 
 const Routeit = () => {
   return (
